@@ -1,0 +1,197 @@
+:root {
+    --color-primario: #6482AD;
+    --color-secundario: #7FA1C3;
+    --color-terciario: #E2DAD6;
+    --color-fondo: #F5EDED;
+    --fuente-inter: "Inter", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente-inter);
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header__logo__alura {
+    width: 100%;
+    height: 88px;
+    display: flex;
+    justify-content: flex-start; /* Logo alineado a la izquierda */
+    align-items: center;
+    background-color: var(--color-secundario);
+}
+
+.imagen__logo__alura {
+    height: 100%;
+}
+
+:root {
+    --color-primario: #6482AD;
+    --color-secundario: #7FA1C3;
+    --color-terciario: #E2DAD6;
+    --color-fondo: #F5EDED;
+    --fuente-inter: "Inter", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente-inter);
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header__logo__alura {
+    width: 100%;
+    height: 88px;
+    display: flex;
+    justify-content: flex-start; /* Logo alineado a la izquierda */
+    align-items: center;
+    background-color: var(--color-secundario);
+}
+
+.imagen__logo__alura {
+    height: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex: 1; /* Ocupa todo el espacio disponible entre el header y el footer */
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between; /* Distribuye el espacio entre la sidebar y el contenido */
+}
+
+.sidebar {
+    width: 300px; /* Ajusta el ancho de la barra lateral */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.50);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro de la barra lateral */
+    position: fixed; /* Fija la barra lateral al lado derecho */
+    right: 0;
+    top: 0;
+    height: 100vh; /* Asegura que la barra lateral ocupe toda la altura de la pantalla */
+}
+
+.mono__desencriptado {
+    width: 250px; /* Aumenta el tamaño de la imagen del mono */
+    height: auto;
+    margin: 20px 0; /* Añade espacio arriba y abajo de la imagen */
+}
+
+.texto__error,
+.texto__aviso__error {
+    margin: 0;
+    color: var(--color-primario);
+    font-size: 1.2rem;
+    text-align: center; /* Centra el texto */
+}
+
+.contenedor__copiar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px; /* Añade espacio arriba del botón copiar */
+}
+
+.content {
+    flex: 1; /* El contenido toma el espacio restante */
+    margin-right: 320px; /* Deja espacio para la barra lateral fija */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contenedor__area__texto {
+    width: 70%;
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Añade espacio arriba de los botones */
+}
+
+.btn__encriptar,
+.btn__desencriptar,
+.btn__copiar {
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn__encriptar {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.btn__desencriptar {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
+
+.btn__copiar {
+    background-color: white;
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
+
+.footer__personal {
+    background-color: var(--color-secundario);
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: auto; /* Asegura que el footer esté en la parte inferior */
+}
+
+.oculto {
+    display: none; /* Oculta los elementos de manera que no ocupen espacio en el layout */
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sidebar {
+        position: static; /* Restablece el posicionamiento en dispositivos móviles */
+        text-align: center; /* Centra el texto en la barra lateral en móviles */
+        width: 100%; /* Ancho completo en móviles */
+        min-width: auto; /* Elimina el ancho mínimo en móviles */
+        height: auto; /* Ajusta la altura en móviles */
+        box-shadow: none; /* Elimina la sombra en móviles */
+    }
+
+    .mono__desencriptado {
+        width: 150px; /* Ajusta el tamaño de la imagen del mono para móviles */
+        margin: 10px auto 0; /* Ajusta la imagen del mono para móviles */
+    }
+
+    .content {
+        width: 100%;
+        margin-right: 0; /* Elimina el margen en móviles */
+    }
+
+    .contenedor__area__texto {
+        width: 100%;
+    }
+}
